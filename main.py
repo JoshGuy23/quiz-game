@@ -11,3 +11,11 @@ def create_questions():
     brain = QuizBrain(question_bank)
     return brain
 
+
+def quiz():
+    questions = create_questions()
+    while questions.still_has_questions():
+        questions.next_question()
+
+
+quiz()

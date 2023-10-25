@@ -1,6 +1,4 @@
-# TODO: Ask questions
 # TODO: Check if answer is correct
-# TODO: Check for end of quiz
 class QuizBrain:
     def __init__(self, q_list):
         self.question_number = 0
@@ -11,3 +9,6 @@ class QuizBrain:
         self.question_number += 1
         q_text = current_question.text
         user_answer = input(f"Q.{self.question_number}: {q_text} (True/False)?: ")
+
+    def still_has_questions(self):
+        return self.question_number < len(self.question_list)
