@@ -16,6 +16,8 @@ def quiz():
     questions = create_questions()
     while questions.still_has_questions():
         questions.next_question()
+    print("You've completed the quiz!")
+    print(f"Your final score is: {questions.score}/{questions.question_number}.")
 
 
 quiz()
